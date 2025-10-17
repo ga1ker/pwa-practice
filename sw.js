@@ -9,6 +9,9 @@ const urlsToCache = [
     `${BASE_PATH}style.css`,
     `${BASE_PATH}app.js`,
     `${BASE_PATH}offline.html`,
+    `${BASE_PATH}login.html`,
+    `${BASE_PATH}icons/apple-touch-icon.png`,
+    `${BASE_PATH}icons/icon-96x96.png`,
     `${BASE_PATH}icons/icon-192x192.png`,
     `${BASE_PATH}icons/icon-512x512.png`,
 ];
