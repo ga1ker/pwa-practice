@@ -3,7 +3,7 @@
 
 // Nombre del sw y los archivos a cachear;
 const CACHE_NAME = "aromantial"
-const BASE_PATH = "/pwa-practice/"
+const BASE_PATH = "pwa-practice/";
 const urlsToCache = [ 
     `${BASE_PATH}index.html`,
     `${BASE_PATH}style.css`,
@@ -21,11 +21,10 @@ const urlsToCache = [
 
 self.addEventListener("install", event => {
     console.log("Service worker instalandose")
-    event.waitUntil(
-        caches.open((CACHE_NAME).then(cache => {
-            cache.addAll(urlsToCache)
-            console.log("archivos en cache, ", urlsToCache)
-        }))
+        event.waitUntil(
+        caches.open(CACHE_NAME).then(cache => {
+            return cache.addAll(urlsToCache);
+        })
     );
 });
 
